@@ -1,0 +1,38 @@
+cmake_minimum_required(VERSION 3.10)
+project(vx-rdp)
+
+find_package(PkgConfig)
+pkg_check_modules(gl REQUIRED gl)
+
+include_directories(util)
+
+add_executable(gears demos/gears.c)
+target_link_libraries(gears :libGLX_nvidia.so.0)
+target_link_libraries(gears m)
+target_link_libraries(gears glut)
+target_link_libraries(gears dl)
+
+add_executable(ray demos/ray.c)
+#target_link_libraries(ray :libGLX_nvidia.so.0)
+target_link_libraries(ray GLX_mesa)
+target_link_libraries(ray m)
+target_link_libraries(ray GLU)
+target_link_libraries(ray glut)
+target_link_libraries(ray dl)
+
+add_executable(gears_w demos/gears.c)
+target_link_libraries(gears_w m)
+target_link_libraries(gears_w glut)
+target_link_libraries(gears_w dl)
+target_link_libraries(gears_w GLX)
+target_link_libraries(gears_w OpenGL)
+target_link_libraries(gears_w ${GL_LINK_LIBRARIES})
+
+add_executable(ray_w demos/ray.c)
+target_link_libraries(ray_w m)
+target_link_libraries(ray_w GLU)
+target_link_libraries(ray_w glut)
+target_link_libraries(ray_w dl)
+target_link_libraries(ray_w GLX)
+target_link_libraries(ray_w OpenGL)
+target_link_libraries(ray_w ${GL_LINK_LIBRARIES})
