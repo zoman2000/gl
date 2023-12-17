@@ -255,7 +255,7 @@ printhelp(void)
    glRecti(40, 40, 600, 440);
    glDisable(GL_BLEND);
 
-   glColor3f(0.0, 0.0, 1.0);
+   glColor3f(1.0, 1.0, 1.0);
    glRasterPos2i(300, 420);
    printstring(GLUT_BITMAP_HELVETICA_18, "Help");
 
