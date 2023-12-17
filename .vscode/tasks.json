@@ -1,0 +1,24 @@
+{
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "make",
+      "command": "make",
+      "args": [
+        "-j",
+        "${config:cmake.parallelJobs}"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/build"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [
+        "$go"
+      ]
+    }
+  ],
+  "version": "2.0.0"
+}
