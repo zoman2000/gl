@@ -2,8 +2,6 @@ sample GL builds
 
 to build use VS Code or just run ./build.sh
 
-
-
 gears   - build with nvidia GL
 ray     - build with mesa GL
 gears_w - build with generic GL
